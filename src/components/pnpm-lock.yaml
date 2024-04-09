@@ -1,0 +1,23 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+devDependencies:
+  '@storybook/addon-themes':
+    specifier: ^8.0.6
+    version: 8.0.6
+
+packages:
+
+  /@storybook/addon-themes@8.0.6:
+    resolution: {integrity: sha512-KwLwE8aP8Wg94cF+MuyqinUAQn6ZBhAWMv43YSZq+ixQVTVPOJ5w5ooFCnx7mJ5UhLbzpRS94iF9izSPRMlDNA==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /ts-dedent@2.2.0:
+    resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
+    engines: {node: '>=6.10'}
+    dev: true
