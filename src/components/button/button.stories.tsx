@@ -21,45 +21,36 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: 'Button',
     variant: 'primary',
-    disabled: false,
   },
 };
 
 export const Secondary: Story = {
   args: {
-    children: 'Button',
     variant: 'secondary',
-    disabled: false,
   },
 };
 
 export const Destructive: Story = {
   args: {
-    children: 'Button',
     variant: 'destructive',
-    disabled: false,
   },
 };
 
 export const Small: Story = {
   args: {
-    children: 'Button',
     size: 'small',
   },
 };
 
 export const Medium: Story = {
   args: {
-    children: 'Button',
     size: 'medium',
   },
 };
 
 export const Large: Story = {
   args: {
-    children: 'Button',
     size: 'large',
   },
 };
