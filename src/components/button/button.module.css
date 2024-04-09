@@ -1,0 +1,29 @@
+.button {
+  background-color: hsla(237, 64%, 50%, 1);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  border: 0.125rem solid hsla(237, 64%, 50%, 1);
+  outline: 0.25rem none hsla(237, 64%, 50%, 0.2);
+  outline-offset: 0.0625rem;
+}
+
+.button:hover {
+  background-color: hsla(237, 64%, 46%, 1);
+}
+
+.button:active,
+.button:focus {
+  background-color: hsla(237, 64%, 42%, 1);
+  outline-style: solid;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
