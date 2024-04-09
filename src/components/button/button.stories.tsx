@@ -12,7 +12,26 @@ const meta = {
     disabled: false,
   },
   argTypes: {
-    disabled: { control: 'boolean' },
+    children: {
+      name: 'Label',
+      control: 'text',
+      description: 'Text to display on the button',
+    },
+    variant: {
+      name: 'Variant',
+      description: 'Variant of the button',
+      control: 'select',
+    },
+    size: {
+      name: 'Size',
+      control: 'select',
+      description: 'Size of the button',
+    },
+    disabled: {
+      name: 'Disabled',
+      control: 'boolean',
+      description: 'Disables the button',
+    },
   },
 } satisfies Meta<typeof Button>;
 
