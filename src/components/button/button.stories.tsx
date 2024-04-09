@@ -2,20 +2,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from './button';
 
-type Story = StoryObj<typeof Button>;
-
-const meta: Meta<typeof Button> = {
+const meta = {
   title: 'Button',
   component: Button,
-  argTypes: {
-    disabled: {
-      control: 'boolean',
-      description: 'Disables the button',
-    },
+  args: {
+    children: 'Button',
+    variant: 'primary',
+    size: 'medium',
+    disabled: false,
   },
-};
+  argTypes: {
+    disabled: { control: 'boolean' },
+  },
+} satisfies Meta<typeof Button>;
 
 export default meta;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
