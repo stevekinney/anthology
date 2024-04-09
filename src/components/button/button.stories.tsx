@@ -40,3 +40,24 @@ export const Destructive: Story = {
     disabled: false,
   },
 };
+
+export const Small: Story = {
+  args: {
+    children: 'Button',
+    size: 'small',
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    children: 'Button',
+    size: 'medium',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    children: 'Button',
+    size: 'large',
+  },
+};

@@ -5,17 +5,9 @@ import styles from './button.module.css';
 
 type ButtonProps = ComponentProps<'button'> & {
   variant?: 'primary' | 'secondary' | 'destructive';
+  size?: 'small' | 'medium' | 'large';
 };
 
-export const Button = ({ variant = 'primary', ...props }: ButtonProps) => {
-  return (
-    <button
-      className={clsx(
-        styles.button,
-        variant === 'secondary' && styles.secondary,
-        variant === 'destructive' && styles.destructive,
-      )}
-      {...props}
-    />
-  );
+export const Button = ({ variant = 'primary', size = 'medium', ...props }: ButtonProps) => {
+  return <button className={clsx(styles.button, styles[variant], styles[size])} {...props} />;
 };
