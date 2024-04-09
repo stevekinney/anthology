@@ -6,6 +6,10 @@ type ButtonProps = ComponentProps<'button'> & {
   variant?: 'primary' | 'secondary' | 'destructive';
 };
 
-export const Button = (props: ButtonProps) => {
-  return <button className={styles.button} {...props} />;
+export const Button = ({ variant = 'primary', ...props }: ButtonProps) => {
+  let className = styles.button;
+  if (variant === 'secondary') className += ` ${styles.secondary}`;
+  if (variant === 'destructive') className += ` ${styles.destructive}`;
+
+  return <button className={className} {...props} />;
 };
