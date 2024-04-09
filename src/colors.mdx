@@ -1,0 +1,36 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import colors from 'tailwindcss/colors';
+import config from '../tailwind.config';
+
+<Meta title="Colors" />
+
+## Brand Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="Brand Colors"
+    colors={{
+      Subtle: '#a5b4fc',
+      Default: '#4f46e5',
+    }}
+  />
+</ColorPalette>
+
+## Application Colors
+
+<ColorPalette>
+  {Object.entries(config.theme.extend.colors).map(([name, value]) => (
+    <ColorItem key={name} title={name} colors={value} />
+  ))}
+</ColorPalette>
+
+## Tailwind Colors
+
+<ColorPalette>
+  {Object.entries(colors)
+    .filter(([, value]) => typeof value !== 'string')
+    .map(([name, value]) => (
+      <ColorItem key={name} title={name} colors={value} />
+    ))}
+</ColorPalette>
