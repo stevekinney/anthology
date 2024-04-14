@@ -52,9 +52,15 @@ export const variants = cva(
           'active:bg-danger-400',
         ],
       },
+      size: {
+        small: ['text-sm', 'px-2', 'py-1'],
+        medium: ['text-sm', 'px-2.5', 'py-1.5'],
+        large: ['text-sm', 'px-3', 'py-2'],
+      },
     },
     defaultVariants: {
       variant: 'secondary',
+      size: 'medium',
     },
   },
 );
