@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   primary: {
     '50': '#faf7fd',
     '100': '#f2ecfb',
@@ -92,4 +92,7 @@ const colors = {
   },
 };
 
-export default colors;
+export const white = '#fffff';
+export const black = '#010209';
+export const transparent = 'transparent';
+export const currentColor = 'currentColor';
