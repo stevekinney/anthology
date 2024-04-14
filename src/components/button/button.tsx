@@ -4,10 +4,7 @@ import clsx from 'clsx';
 
 import styles from './button.module.css';
 
-type ButtonProps = ComponentProps<'button'> & {
-  variant?: ButtonVariants['variant'];
-  size?: 'small' | 'medium' | 'large';
-};
+type ButtonProps = ComponentProps<'button'> & ButtonVariants;
 
 export const variants = cva(
   [
