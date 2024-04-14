@@ -68,5 +68,5 @@ export const variants = cva(
 type ButtonVariants = VariantProps<typeof variants>;
 
 export const Button = ({ variant = 'primary', size = 'medium', ...props }: ButtonProps) => {
-  return <button className={clsx(variants({ variant }), styles[size])} {...props} />;
+  return <button className={clsx(variants({ variant, size }))} {...props} />;
 };
