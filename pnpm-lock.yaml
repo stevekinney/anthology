@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/inter':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@storybook/addon-themes':
+    specifier: ^8.0.8
+    version: 8.0.8
   lucide-react:
     specifier: ^0.366.0
     version: 0.366.0(react@18.2.0)
@@ -2192,6 +2198,13 @@ packages:
       }
     dev: true
 
+  /@fontsource-variable/inter@5.0.17:
+    resolution:
+      {
+        integrity: sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==,
+      }
+    dev: false
+
   /@humanwhocodes/config-array@0.12.3:
     resolution:
       {
@@ -2773,6 +2786,15 @@ packages:
       '@storybook/global': 5.0.0
       ts-dedent: 2.2.0
     dev: true
+
+  /@storybook/addon-themes@8.0.8:
+    resolution:
+      {
+        integrity: sha512-vLzWHByRDULzerQtkTEYJEy9xIIw50LVfHg5b54peqlXLenrEnJnDkvmuZV2FzDeyVMIoG+MEAzTVi9BQ13uDQ==,
+      }
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: false
 
   /@storybook/addon-toolbars@8.0.8:
     resolution:
@@ -10368,7 +10390,6 @@ packages:
         integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==,
       }
     engines: { node: '>=6.10' }
-    dev: true
 
   /ts-interface-checker@0.1.13:
     resolution:

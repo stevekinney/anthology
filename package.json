@@ -14,6 +14,8 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.0.17",
+    "@storybook/addon-themes": "^8.0.8",
     "lucide-react": "^0.366.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
