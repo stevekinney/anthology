@@ -1,17 +1,5 @@
 .button {
-  align-items: center;
-  background-color: #8a55c8;
-  border-color: transparent;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-  color: white;
-  cursor: pointer;
-  display: inline-flex;
-  font-weight: 600;
-  gap: 0.375rem;
-  padding: 0.375rem 0.625rem;
-  transition: background-color 0.2s;
+  @apply inline-flex cursor-pointer items-center gap-1.5 rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-white shadow-sm transition-colors;
 }
 
 /* Focus visible styles */
