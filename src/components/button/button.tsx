@@ -2,8 +2,6 @@ import { ComponentProps } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
-import styles from './button.module.css';
-
 type ButtonProps = ComponentProps<'button'> & ButtonVariants;
 
 export const variants = cva(
@@ -33,6 +31,9 @@ export const variants = cva(
           'border-transparent',
           'hover:bg-primary-500',
           'active:bg-primary-400',
+          'dark:bg-primary-500',
+          'dark:hover:bg-primary-400',
+          'dark:active:bg-primary-300',
         ],
         secondary: [
           'bg-white',
@@ -40,6 +41,11 @@ export const variants = cva(
           'border-slate-300',
           'hover:bg-slate-50',
           'active:bg-slate-100',
+          'dark:bg-slate-900',
+          'dark:text-white',
+          'dark:border-slate-900',
+          'dark:hover:bg-slate-800',
+          'dark:active:bg-slate-700',
         ],
         destructive: [
           'bg-danger-600',
@@ -47,6 +53,9 @@ export const variants = cva(
           'border-transparent',
           'hover:bg-danger-500',
           'active:bg-danger-400',
+          'dark:bg-danger-500',
+          'dark:hover:bg-danger-400',
+          'dark:active:bg-danger-300',
         ],
       },
       size: {
