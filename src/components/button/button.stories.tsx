@@ -6,6 +6,8 @@ const meta = {
   component: Button,
   args: {
     children: 'Button',
+    variant: 'primary',
+    size: 'medium',
     disabled: false,
   },
   argTypes: {
@@ -36,5 +38,33 @@ export const Secondary: Story = {
 export const Destructive: Story = {
   args: {
     variant: 'destructive',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+  },
+};
+
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: 'dark',
+    },
+  },
+};
+
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile1',
+    },
   },
 };
