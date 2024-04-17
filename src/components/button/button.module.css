@@ -1,17 +1,5 @@
 .button {
-  align-items: center;
-  background-color: #4f46e5;
-  border-color: transparent;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  color: white;
-  cursor: pointer;
-  display: inline-flex;
-  font-weight: 600;
-  gap: 0.375rem;
-  padding: 0.375rem 0.75rem;
-  transition: background-color 0.2s;
+  @apply inline-flex cursor-pointer items-center gap-1.5 rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-white shadow-sm transition-colors;
 }
 
 /* Focus visible styles */
@@ -27,57 +15,57 @@
 }
 
 .button:hover {
-  background-color: #4338ca;
+  background-color: #9967d5;
 }
 
 .button:active {
-  background-color: #3730a3;
+  background-color: #bc9be5;
 }
 
 /* Variant: secondary */
 .secondary {
   background-color: white;
-  color: #1f2937;
-  border-color: #94a3b8;
+  color: #343a46;
+  border-color: #b1bbc8;
 }
 
 .secondary:hover {
-  background-color: #f1f5f9;
+  background-color: #f6f7f9;
 }
 
 .secondary:active {
-  background-color: #e2e8f0;
+  background-color: #eceef2;
 }
 
 /* Variant: destructive */
 .destructive {
-  background-color: #dc2626;
+  background-color: #d9253e;
   color: white;
   border-color: transparent;
 }
 
 .destructive:hover {
-  background-color: #b91c1c;
+  background-color: #ed4656;
 }
 
 .destructive:active {
-  background-color: #991b1b;
+  background-color: #f6767f;
 }
 
 /* Variant: ghost */
 .ghost {
   background-color: transparent;
-  color: #4f46e5;
+  color: #343a46;
   border-color: transparent;
   box-shadow: none;
 }
 
 .ghost:hover {
-  background-color: #f1f5f9;
+  background-color: #f6f7f9;
 }
 
 .ghost:active {
-  background-color: #e2e8f0;
+  background-color: #eceef2;
 }
 
 /* Sizes */

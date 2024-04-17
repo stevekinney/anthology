@@ -1,0 +1,28 @@
+import { Meta, ColorPalette, ColorItem, Title } from '@storybook/blocks';
+import { colors } from './tokens/colors';
+
+<Meta title="Tokens/Colors" />
+<Title>Colors</Title>
+
+The color tokens within this design system encapsulates a rich palette of semantic colors, each with specific roles and shades to cater to various UI elements and states.
+
+The `primary` colors, with shades ranging from light lavender (#faf7fd) to deep purple (#361952), form the core visual identity, suitable for branding elements and primary actions.
+
+The `secondary` colors shift towards teal (#f0fdfa to #042f2d), providing a refreshing contrast ideal for secondary actions or highlighting important UI elements without overpowering the primary hue.
+
+The `accent` color spectrum, from a soft peach (#fff7ed) to a dark burnt orange (#431307), is designed to draw attention to specific components or prompts, making it perfect for call-to-action buttons or interactive elements.
+
+- The information color in a design system typically employs a clear, subdued shade, such as a light blue or gray, to convey neutral and informative messages without invoking urgency or emotion.
+- The `success` shades signify positive actions or confirmations, with a vibrant green (#f1fcf2 to #082b11) that should be used to indicate completion, approval, or progress.
+- The `warning` palette, transitioning from a light yellow (#fffde7) to a darker shade (#442004), is tailored for cautionary messages or to highlight areas that require user attention.
+- `danger` colors range from a soft pinkish-red (#fef3f2) to a dark maroon (#490815), ideal for error messages, critical warnings, or delete actions, signaling users to proceed with caution.
+
+Lastly, the `slate` collection, with shades from very light gray (#f6f7f9) to almost black (#23272e), provides a neutral backdrop suited for text, backgrounds, and UI frames, ensuring legibility and a muted contrast against more vibrant colors.
+
+Additional constants like `white`, `black`, `transparent`, and `currentColor` offer foundational colors for designing with flexibility and precision, supporting a cohesive and accessible user interface across the design system.
+
+<ColorPalette>
+  {Object.entries(colors).map(([name, value]) => (
+    <ColorItem key={name} title={name} colors={value} />
+  ))}
+</ColorPalette>

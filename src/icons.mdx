@@ -1,0 +1,16 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
+import { icons, Icon } from './components/icon';
+
+<Meta title="Tokens/Icons" />
+
+<Title>Icons</Title>
+
+These are the icons being used in our design system. They are available as React components.
+
+<IconGallery>
+  {icons.map((icon) => (
+    <IconItem key={icon} name={icon}>
+      <Icon type={icon} />
+    </IconItem>
+  ))}
+</IconGallery>

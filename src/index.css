@@ -1,7 +1,9 @@
+@import '@fontsource-variable/inter';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply dark:bg-slate-900;
+  @apply dark:bg-slate-950 dark:text-white;
 }
