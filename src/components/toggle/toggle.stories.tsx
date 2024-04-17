@@ -11,9 +11,3 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof Toggle>;
-
-export const Default: Story = {
-  args: {
-    label: 'Toggle',
-  },
-};

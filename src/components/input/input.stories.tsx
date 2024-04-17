@@ -46,29 +46,3 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof Input>;
-
-export const Default: Story = {};
-
-export const Required: Story = {
-  args: {
-    required: true,
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    disabled: true,
-  },
-};
-
-export const WithDetails: Story = {
-  args: {
-    details: 'This is a helpful hint.',
-  },
-};
-
-export const Unlabeled: Story = {
-  args: {
-    unlabeled: true,
-  },
-};

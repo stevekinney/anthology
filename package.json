@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm storybook",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write --ignore-unknown .",
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.17",
-    "@storybook/addon-themes": "^8.0.8",
     "lucide-react": "^0.366.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -27,6 +26,7 @@
     "@storybook/addon-interactions": "^8.0.8",
     "@storybook/addon-links": "^8.0.8",
     "@storybook/addon-onboarding": "^8.0.8",
+    "@storybook/addon-themes": "^8.0.8",
     "@storybook/blocks": "^8.0.8",
     "@storybook/react": "^8.0.8",
     "@storybook/react-vite": "^8.0.8",
