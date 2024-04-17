@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { useMemo, useState, type ComponentProps } from 'react';
 import { isTooLong, getLength } from './get-length';
+import { twMerge as merge } from 'tailwind-merge';
 
 type TextAreaProps = ComponentProps<'textarea'> & { label: string };
 
@@ -14,7 +15,7 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
   return (
     <label className="flex flex-col gap-1.5">
       <span
-        className={clsx(
+        className={merge(
           'inline-flex items-center gap-1 text-sm font-medium',
           required && 'after:h-1.5 after:w-1.5 after:rounded-full after:bg-accent-500',
         )}
