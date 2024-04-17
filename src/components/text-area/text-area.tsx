@@ -1,11 +1,15 @@
 import clsx from 'clsx';
 import { useMemo, useState, type ComponentProps } from 'react';
+import { isTooLong, getLength } from './get-length';
 
 type TextAreaProps = ComponentProps<'textarea'> & { label: string };
 
 export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps) => {
-  const [value, setValue] = useState(String(props.value || ''));
-  const tooLong = useMemo(() => !!maxLength && value.length > maxLength, [value, maxLength]);
+  const [value, setValue] = useState(props.value ?? '');
+  const tooLong = useMemo(() => isTooLong(value, maxLength), [value, maxLength]);
+  const length = useMemo(() => getLength(value), [value]);
+
+  console.log({ label, required, maxLength, value, ...props });
 
   return (
     <label className="flex flex-col gap-1.5">
@@ -24,15 +28,19 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
           tooLong && 'ring-2 ring-danger-500 dark:ring-danger-500',
         )}
         {...props}
+        onChange={(e) => {
+          setValue(e.target.value);
+          if (typeof props.onChange === 'function') props.onChange(e);
+        }}
         value={value}
+        required={required}
         aria-invalid={tooLong}
-        onChange={(e) => setValue(e.target.value)}
       />
 
       {maxLength && (
         <div className="gap-1.4 flex justify-end text-xs">
-          <p className={clsx(tooLong ? 'text-danger-500' : 'text-slate-500')}>
-            <span data-testid="length">{value.length}</span>/{maxLength}
+          <p className={clsx(tooLong ? 'text-danger-500' : 'text-slate-600')}>
+            <span data-testid="length">{length}</span>/{maxLength}
           </p>
         </div>
       )}

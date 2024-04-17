@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 import { colors, white, black, transparent, currentColor } from './src/tokens/colors';
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
+  content: ['./src/**/*.tsx', './src/**/*.ts', './src/**/*.mdx'],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     colors: {

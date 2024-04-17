@@ -1,8 +1,18 @@
-import { ComponentProps } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
-type ButtonProps = ComponentProps<'button'> & ButtonVariants;
+type ButtonProps = ComponentPropsWithoutRef<'button'> &
+  ButtonVariants & {
+    href?: never;
+  };
+
+type AnchorProps = ComponentPropsWithoutRef<'a'> &
+  ButtonVariants & {
+    href?: string;
+  };
+
+type ButtonOrLinkProps = ButtonProps | AnchorProps;
 
 export const variants = cva(
   [
@@ -73,6 +83,11 @@ export const variants = cva(
 
 type ButtonVariants = VariantProps<typeof variants>;
 
-export const Button = ({ variant = 'primary', size = 'medium', ...props }: ButtonProps) => {
-  return <button className={clsx(variants({ variant, size }))} {...props} />;
+export const Button = ({ variant = 'primary', size = 'medium', ...props }: ButtonOrLinkProps) => {
+  const className = clsx(variants({ variant, size }));
+  if (props.href) {
+    return <a className={className} {...(props as ComponentPropsWithoutRef<'a'>)} />;
+  } else {
+    return <button className={className} {...(props as ComponentPropsWithoutRef<'button'>)} />;
+  }
 };

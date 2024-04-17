@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Button } from './button';
+import { expect, within } from '@storybook/test';
 
 const meta = {
   title: 'Components/Button',
@@ -89,5 +90,18 @@ export const Medium: Story = {
 export const Large: Story = {
   args: {
     size: 'large',
+  },
+};
+
+export const ButtonAsLink: Story = {
+  args: {
+    href: 'https://example.com',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = await canvas.findByText('Button');
+
+    expect(button.tagName).toBe('A');
+    expect(button).toHaveAttribute('href', 'https://example.com');
   },
 };

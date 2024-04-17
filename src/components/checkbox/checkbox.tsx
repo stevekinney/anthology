@@ -1,16 +1,17 @@
 import { ComponentProps } from 'react';
 import clsx from 'clsx';
 
-type CheckboxProps = Omit<ComponentProps<'input'>, 'type'> & {
+export type CheckboxProps = Omit<ComponentProps<'input'>, 'type'> & {
   label: string;
 };
 
-export const Checkbox = ({ label, ...props }: CheckboxProps) => {
+export const Checkbox = ({ label, className, ...props }: CheckboxProps) => {
   return (
     <label
       className={clsx(
-        'inline-flex cursor-pointer items-center gap-1.5',
+        'inline-flex cursor-pointer select-none items-center gap-1.5',
         props.disabled && 'cursor-not-allowed opacity-50',
+        className,
       )}
     >
       <input type="checkbox" className="peer sr-only" {...props} />
