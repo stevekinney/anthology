@@ -26,3 +26,11 @@ export default meta;
 type Story = StoryObj<typeof TaskList>;
 
 export const Default: Story = {};
+
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile1',
+    },
+  },
+};

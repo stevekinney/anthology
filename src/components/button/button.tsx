@@ -69,7 +69,7 @@ export const variants = cva(
         ],
       },
       size: {
-        small: ['text-sm', 'px-2', 'py-1'],
+        small: ['text-xs', 'px-2', 'py-1'],
         medium: ['text-sm', 'px-2.5', 'py-1.5'],
         large: ['text-sm', 'px-3', 'py-2'],
       },
