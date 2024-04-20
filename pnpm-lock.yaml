@@ -76,6 +76,9 @@ devDependencies:
   axe-playwright:
     specifier: ^2.0.1
     version: 2.0.1(playwright@1.43.0)
+  chromatic:
+    specifier: ^11.3.0
+    version: 11.3.0
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0

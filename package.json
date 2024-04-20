@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "chromatic": "npx chromatic --project-token=chpt_89785d54a20c755"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.17",
@@ -39,6 +40,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "axe-playwright": "^2.0.1",
+    "chromatic": "^11.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "eslint": "^9.0.0",

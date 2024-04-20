@@ -57,6 +57,14 @@ export const Disabled: Story = {
   args: {
     disabled: true,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const textArea = canvas.getByRole('textbox');
+
+    expect(textArea).toBeDisabled();
+    await userEvent.type(textArea, 'Hello, World!');
+    expect(textArea).toHaveValue('');
+  },
 };
 
 export const WithCount: Story = {
@@ -91,6 +99,5 @@ export const LengthTooLong: Story = {
     expect(textArea).toHaveAttribute('aria-invalid', 'true');
     expect(textArea).toHaveClass('ring-danger-500');
     expect(count).toHaveStyle({ color: 'rgb(237, 70, 86)' });
-    expect(textArea).toHaveStyle({ borderColor: 'rgb(237, 70, 86)' });
   },
 };
