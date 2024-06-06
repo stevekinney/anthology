@@ -1,5 +1,5 @@
 .button {
-  @apply inline-flex cursor-pointer items-center gap-1.5 rounded border border-transparent bg-primary-600 px-2.5 py-1.5 text-white shadow-sm transition-colors;
+  @apply bg-primary-600 inline-flex cursor-pointer items-center gap-1.5 rounded border border-transparent px-2.5 py-1.5 text-white shadow-sm transition-colors;
 }
 
 /* Focus visible styles */

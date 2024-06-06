@@ -16,7 +16,7 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
       <span
         className={clsx(
           'inline-flex items-center gap-1 text-sm font-medium',
-          required && 'after:h-1.5 after:w-1.5 after:rounded-full after:bg-accent-500',
+          required && 'after:bg-accent-500 after:h-1.5 after:w-1.5 after:rounded-full',
         )}
       >
         {label}
@@ -24,8 +24,8 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
 
       <textarea
         className={clsx(
-          'w-full gap-2 rounded-md bg-transparent bg-white p-4 text-sm placeholder-slate-400 shadow-sm ring-1 ring-inset ring-slate-500 invalid:bg-danger-50 focus:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-600 disabled:cursor-not-allowed disabled:bg-slate-50 dark:bg-slate-800 dark:placeholder-slate-300',
-          tooLong && 'ring-2 ring-danger-500 dark:ring-danger-500',
+          'invalid:bg-danger-50 focus:bg-primary-50 focus:ring-primary-600 w-full gap-2 rounded-md bg-transparent bg-white p-4 text-sm placeholder-slate-400 shadow-sm ring-1 ring-inset ring-slate-500 focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:bg-slate-50 dark:bg-slate-800 dark:placeholder-slate-300',
+          tooLong && 'ring-danger-500 dark:ring-danger-500 ring-2',
         )}
         {...props}
         onChange={(e) => {

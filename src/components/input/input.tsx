@@ -24,7 +24,7 @@ export const Input = ({
       <span
         className={clsx(
           'inline-flex items-center gap-1 text-sm font-medium',
-          required && 'after:h-1.5 after:w-1.5 after:rounded-full after:bg-accent-500',
+          required && 'after:bg-accent-500 after:h-1.5 after:w-1.5 after:rounded-full',
           unlabeled && 'sr-only',
         )}
       >
@@ -33,7 +33,7 @@ export const Input = ({
 
       <input
         value={value}
-        className="block w-full gap-2 rounded-md bg-transparent bg-white px-3 py-1 text-sm placeholder-slate-400 shadow shadow-sm ring-1 ring-inset ring-slate-500 focus:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-600 disabled:cursor-not-allowed disabled:bg-slate-50 dark:bg-slate-800 dark:placeholder-slate-300"
+        className="focus:bg-primary-50 focus:ring-primary-600 block w-full gap-2 rounded-md bg-transparent bg-white px-3 py-1 text-sm placeholder-slate-400 shadow shadow-sm ring-1 ring-inset ring-slate-500 focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:bg-slate-50 dark:bg-slate-800 dark:placeholder-slate-300"
         placeholder={unlabeled ? label : placeholder}
         disabled={disabled}
         required={required}
